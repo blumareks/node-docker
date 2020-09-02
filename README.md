@@ -146,7 +146,7 @@ docker logs <container_id>
 
 For example ...
 ```
-root@terminal-5-846448d675-bk75j:/data# docker logs 4450279a9f50   
+# docker logs 4450279a9f50   
 
 
 Running on http://0.0.0.0:8080
