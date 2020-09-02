@@ -8,12 +8,14 @@ You can use one of the following environments for this workshop
 ## Steps
 
 ### Step 1 - clone repository
+
 Open your local terminal. 
 ```
 git clone https://github.com/blumareks/node-docker.git
 ```
 
 ### Step 2 - build the docker image
+
 Change into the directory you just cloned and build the docker image
 ```
 cd node-docker
@@ -76,15 +78,17 @@ docker run -p 8080:8080 -d blumareks/node-mycontainer
 ```
 
 ### Step 4 - test the application
-```
-curl "localhost:8080/hello
+
+```curl "localhost:8080/hello ```
 
 ```Hello World - you might want to add some text```
 
 **How cool was that!** You just containerzied a Node.js application
 
 ## Clean up <OPTIONAL>
+  
 ### Step 5 - stop the container
+
 You can first stop the container. You need the container tag or the id to stop it. Let's look it up first
 
 ```
@@ -101,11 +105,14 @@ docker container stop 419104eff9be
 ```
 
 ### Step 6 - remove the container
+
 Run the following command to remove the container. Replace the id with your container id identified in the step above.
 ```
 docker container rm 419104eff9be
 ```
+
 ### Step 7 - remove the image
+
 You can now delete the image. You again need the image id. 
 
 ```
@@ -129,8 +136,10 @@ Deleted: sha256:361c46840912a7b9539b6ddf00164492fc594701085f0e2c9d2c1544bca8498c
 ```
 
 ## Troubleshooting
+
 ### Check container logs
 You can check the logs for your container using
+
 ```
 docker logs <container_id>
 ```
