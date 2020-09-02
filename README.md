@@ -1,17 +1,15 @@
-# Workshop for Containers Developer Summit
+# Workshop for Containers
 This workshop is an introduction to Docker, which is a runtime for containers. You will create a `containerized` Node.js application.
 
 ## Environment
 You can use one of the following environments for this workshop
 1. Install `docker` locally using [Docker Desktop](https://www.docker.com/products/docker-desktop).
-2. Use the web shell terminal provided to you at the workshop.
 
 ## Steps
 
 ### Step 1 - clone repository
-Open your local terminal or the web terminal provided in the workshop and change to the `/data` directory. Close this directory.
+Open your local terminal. 
 ```
-cd data
 git clone https://github.com/blumareks/node-docker.git
 ```
 
@@ -66,7 +64,7 @@ CMD [ "node", "server.js" ]
 ```
 ... starts the application by running `node server.js`.
 
-### Step 7 - run the docker image
+### Step 3 - run the docker image
 ```
 docker run -p 8080:8080 -d <docker-username>/node-mycontainer
 ```
@@ -77,7 +75,7 @@ In my case, I would run
 docker run -p 8080:8080 -d blumareks/node-mycontainer
 ```
 
-### Step 8 - test the application
+### Step 4 - test the application
 ```
 curl "localhost:8080/hello
 
@@ -86,7 +84,7 @@ curl "localhost:8080/hello
 **How cool was that!** You just containerzied a Node.js application
 
 ## Clean up <OPTIONAL>
-### Step 9 - stop the container
+### Step 5 - stop the container
 You can first stop the container. You need the container tag or the id to stop it. Let's look it up first
 
 ```
@@ -102,12 +100,12 @@ Stop the image with the following command. You can replace the id with your cont
 docker container stop 419104eff9be
 ```
 
-### Step 10 - remove the container
+### Step 6 - remove the container
 Run the following command to remove the container. Replace the id with your container id identified in the step above.
 ```
 docker container rm 419104eff9be
 ```
-### Step 11 - remove the image
+### Step 7 - remove the image
 You can now delete the image. You again need the image id. 
 
 ```
